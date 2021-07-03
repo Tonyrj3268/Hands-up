@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hands-up</title>
+	<style type="text/css">
+		.topblock{height:60px;background-color: #6495ed;color:black;text-align:right;padding: 10px;}
+		.loginbutton{width:100px;height:40px;background-color: #87cefa;font-size: 30px;font-weight: bold;padding:5px;margin: 10px;display: inline-flex;vertical-align: top;}
+	</style>
+	<script type="text/javascript">
+		function init(){
+			var btn=document.getElementById("loginbtn");
+			var login=function(){
+				window.location.href="file:///C:/Users/user/OneDrive/%E6%A1%8C%E9%9D%A2/Hands-up/loginframe.html";		
+			};
+			btn.addEventListener("click",login);
+
+		}
+	</script>
+</head>
+<body onload="init()" style="background-color: #eeeeee;margin:0px;">
+	<div class="topblock"><span class="loginbutton">Login</span></div>
+    <div style="font-weight: bold;">Hello</div>
+    <div class="topblock"><button id="loginbtn">Login</button></div>
+    
+
+</body>
+</html>
