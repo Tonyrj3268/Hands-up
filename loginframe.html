@@ -105,7 +105,16 @@
             font: 11px Arial;
         }
     </style>
-    
+    <script type="text/javascript">
+        function init(){
+            var btn=document.getElementById("signupbtn");
+            var login=function(){
+                window.location.href="https://tonyrj3268.github.io/Hands-up/signup.html";       
+            };
+            btn.addEventListener("click",login);
+
+        }
+    </script>
 </head>
 <body>
     <div class="wrapper">
@@ -129,7 +138,7 @@
 
                     
                     <button type="submit" class="loginBtn">登入</button>
-                    <div> 新使用者註冊</div>
+                    <div> <button type="button" class="loginBtn" id="signupbtn">新使用者註冊</button></div>
                 </div>
             </div>
         </form>
