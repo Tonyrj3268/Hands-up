@@ -8,13 +8,13 @@ $sql = "select * from user where UserID = '$name' and Password='$passowrd'";//�
 $result = mysqli_query($con,$sql);//執行sql
 $rows=mysqli_num_rows($result);//返回一個數值
 if($rows){//0 false 1 true
-header("refresh:0;url=C:/xampp/htdocs/Hands-up/Welcome.html");//如果成功跳轉至welcome.html頁面
+header("refresh:0;url=https://tonyrj3268.github.io/Hands-up/Welcome.html");//如果成功跳轉至welcome.html頁面
 exit;
 }else{
 echo "使用者名稱或密碼錯誤";
 echo "
 <script>
-setTimeout(function(){window.location.href='loginframe.html';},1000);
+setTimeout(function(){window.location.href='https://tonyrj3268.github.io/Hands-up/loginframe.html';},1000);
 </script>
 ";
 }
@@ -22,7 +22,7 @@ setTimeout(function(){window.location.href='loginframe.html';},1000);
 echo "表單填寫不完整";
 echo "
 <script>
-setTimeout(function(){window.location.href='login.html';},1000);
+setTimeout(function(){window.location.href='https://tonyrj3268.github.io/Hands-up/loginframe.html';},1000);
 </script>";
 //如果錯誤使用js 1秒後跳轉到登入頁面重試;
 }
