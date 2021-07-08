@@ -106,29 +106,31 @@
         }
     </style>
     <script type="text/javascript">
-        function init(){
-            var btn=document.getElementById("signupbtn");
-            var login=function(){
-                window.location.href="https://tonyrj3268.github.io/Hands-up/signup.html";       
-            };
-            btn.addEventListener("click",login);
-
-        }
+        
+    
+    function init(){
+        var btn=document.getElementById("signupbtn");
+        var login=function(){
+            window.location.href="https://tonyrj3268.github.io/Hands-up/signup.html";       
+        };
+        btn.addEventListener("click",login);
+    };
     </script>
 </head>
 <body onload="init()">
     <div class="wrapper">
-        <form action="http://localhost:8080/signin.php" method="post">
+        <form action="http://localhost:8080/actionlogin.php" method="post" id="loginForm">
             <!--form action表資料填完後會送到的url地址 method通常為get(會放在網址，可見)/post(放入封包，隱私性) -->
             <div class="loginBox">
                 <div class="loginBoxCenter">
                     <p><label for="username">使用者名稱：</label></p>
                     <!--autofocus 規定當頁面載入時按鈕應當自動地獲得焦點。 -->
                     <!-- placeholder提供可描述輸入欄位預期值的提示資訊-->
-                    <p><input type="text" id="text" name="UserID" class="loginInput" autofocus="autofocus" required="required" autocomplete="off" placeholder="請輸入郵箱/手機號" value="" /></p>
+                    <p><input type="text" id="UserID" name="UserID" class="loginInput" autofocus="autofocus" required="required" autocomplete="off" placeholder="請輸入郵箱/手機號" value="" /></p>
                     <!-- required 規定必需在提交之前填寫輸入欄位-->
                     <p><label for="password">密碼：</label></p>
-                    <p><input type="password" id="password" name="Password" class="loginInput" required="required" placeholder="請輸入密碼" value="" /></p>
+                    <p><input type="password" id="Password" name="Password" class="loginInput" required="required" placeholder="請輸入密碼" value="" /></p>
+                    <input type="hidden" name="refer" value="<?php echo (isset($_POST['refer'])) ? $_POST['refer'] : 'index.php'; ?>">
                     <p><a class="forgetLink" href="#">忘記密碼?</a></p>
                     <input id="remember" type="checkbox" name="remember" />
                     <label for="remember">記住登入狀態</label>
